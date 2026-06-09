@@ -2,6 +2,13 @@
 
 ### Global Solution 2026.1 — Cross-Platform Application Development | FIAP
 
+<p align="center">
+  <strong>Predictive Mission Control</strong><br>
+  Plataforma mobile de monitoramento preditivo para missões orbitais simuladas.
+</p>
+
+---
+
 ## Descrição
 
 O **OrbitIQ** é um aplicativo mobile desenvolvido em **React Native + Expo** para simular uma plataforma inteligente de monitoramento e análise preditiva de uma missão espacial.
@@ -24,47 +31,53 @@ O diferencial do OrbitIQ está na combinação de uma interface temática inspir
 
 ## Telas do Aplicativo
 
-### Entrada — Tela Inicial
-
-![Entrada](./assets/screenshots/entrada.png)
-
-Tela de abertura do OrbitIQ, apresentando o nome do aplicativo, a proposta da solução e o acesso ao painel principal. Essa tela funciona como introdução ao sistema de monitoramento preditivo da missão espacial.
-
-### Painel — Dashboard Principal
-
-![Painel](./assets/screenshots/painel.png)
-
-Tela principal do OrbitIQ, apresentando o status geral da missão, tempo de operação, próxima janela de comunicação, estabilidade orbital, energia solar, temperatura média, qualidade do sinal, alertas recentes, performance do sistema e previsão inteligente de risco operacional.
-
-### Sensores — Monitoramento em Tempo Real
-
-![Sensores](./assets/screenshots/sensores.png)
-
-Dashboard dedicado ao acompanhamento dos sensores da missão, exibindo temperatura externa, pressão interna, temperatura interna, umidade, radiação e vibração com indicadores visuais e histórico simulado.
-
-### Energia — Sistema Energético
-
-![Energia](./assets/screenshots/energia.png)
-
-Tela responsável por exibir a carga da bateria, entrada de energia solar, consumo dos sistemas, geração solar ao longo do tempo, distribuição de consumo e status dos painéis solares.
-
-### Sinal — Comunicação Orbital
-
-![Sinal](./assets/screenshots/sinal.png)
-
-Dashboard de comunicação com qualidade do sinal, latência, perda de pacotes, canais de comunicação e conexões ativas entre a missão, estação terrestre e satélites relay.
-
-### Alertas — Central de Eventos
-
-![Alertas](./assets/screenshots/alertas.png)
-
-Tela que lista alertas ativos, pendentes e resolvidos. Os alertas são gerados automaticamente com base nos dados simulados e nos limiares definidos pelo operador. Também é possível resolver alertas ativos, movendo-os para a lista de alertas resolvidos.
-
-### Configurações — Limiares e Preferências
-
-![Configurações](./assets/screenshots/configuracoes.png)
-
-Formulário funcional para configurar temperatura crítica, bateria crítica e sinal mínimo. Também permite alterar preferências de notificação e salvar os dados localmente com AsyncStorage.
+<table>
+  <tr>
+    <td align="center">
+      <strong>Entrada</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/entrada.png" alt="Tela de entrada" width="170"><br>
+      <sub>Apresentação do app e acesso ao painel.</sub>
+    </td>
+    <td align="center">
+      <strong>Painel</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/painel.png" alt="Painel principal" width="170"><br>
+      <sub>Status geral da missão e previsão inteligente.</sub>
+    </td>
+    <td align="center">
+      <strong>Sensores</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/sensores.png" alt="Tela de sensores" width="170"><br>
+      <sub>Monitoramento de sensores em tempo real simulado.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>Energia</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/energia.png" alt="Tela de energia" width="170"><br>
+      <sub>Bateria, consumo, entrada e geração solar.</sub>
+    </td>
+    <td align="center">
+      <strong>Sinal</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/sinal.png" alt="Tela de sinal" width="170"><br>
+      <sub>Comunicação orbital, latência e canais ativos.</sub>
+    </td>
+    <td align="center">
+      <strong>Alertas</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/alertas.png" alt="Tela de alertas" width="170"><br>
+      <sub>Eventos ativos, pendentes e resolvidos.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>Configurações</strong><br>
+      <img src="./OrbitIQ/assets/screenshots/configuracoes.png" alt="Tela de configurações" width="170"><br>
+      <sub>Formulário de limiares e preferências salvas.</sub>
+    </td>
+    <td align="center" colspan="2">
+      <strong>OrbitIQ</strong><br>
+      <sub>Interface mobile temática espacial com dashboards funcionais, alertas automáticos, Context API e persistência local.</sub>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -104,39 +117,43 @@ Formulário funcional para configurar temperatura crítica, bateria crítica e s
 
 ## Estrutura do Projeto
 
+> Observação: o projeto Expo está dentro da pasta `OrbitIQ/` no repositório.
+
 ```txt
-OrbitIQ/
-├── assets/
-│   ├── images/
-│   └── screenshots/
-│       ├── entrada.png
-│       ├── painel.png
-│       ├── sensores.png
-│       ├── energia.png
-│       ├── sinal.png
-│       ├── alertas.png
-│       └── configuracoes.png
-├── src/
-│   ├── app/
-│   │   ├── _layout.tsx
-│   │   ├── index.tsx
-│   │   └── (tabs)/
-│   │       ├── _layout.tsx
-│   │       ├── dashboard.tsx
-│   │       ├── sensors.tsx
-│   │       ├── energy.tsx
-│   │       ├── signal.tsx
-│   │       ├── alerts.tsx
-│   │       └── settings.tsx
-│   ├── components/
-│   ├── constants/
-│   ├── context/
-│   └── types/
-├── app.json
-├── package.json
-├── package-lock.json
+GS_CP_OrbitIQ/
 ├── README.md
-└── tsconfig.json
+└── OrbitIQ/
+    ├── assets/
+    │   ├── images/
+    │   └── screenshots/
+    │       ├── entrada.png
+    │       ├── painel.png
+    │       ├── sensores.png
+    │       ├── energia.png
+    │       ├── sinal.png
+    │       ├── alertas.png
+    │       └── configuracoes.png
+    ├── scripts/
+    ├── src/
+    │   ├── app/
+    │   │   ├── _layout.tsx
+    │   │   ├── index.tsx
+    │   │   └── (tabs)/
+    │   │       ├── _layout.tsx
+    │   │       ├── dashboard.tsx
+    │   │       ├── sensors.tsx
+    │   │       ├── energy.tsx
+    │   │       ├── signal.tsx
+    │   │       ├── alerts.tsx
+    │   │       └── settings.tsx
+    │   ├── components/
+    │   ├── constants/
+    │   ├── context/
+    │   └── types/
+    ├── app.json
+    ├── package.json
+    ├── package-lock.json
+    └── tsconfig.json
 ```
 
 ---
@@ -160,10 +177,10 @@ Clone o repositório:
 git clone https://github.com/jalbino0/GS_CP_OrbitIQ.git
 ```
 
-Acesse a pasta do projeto:
+Acesse a pasta do projeto Expo:
 
 ```bash
-cd GS_CP_OrbitIQ
+cd GS_CP_OrbitIQ/OrbitIQ
 ```
 
 Instale as dependências:
@@ -295,7 +312,7 @@ Antes da entrega final, verificar se:
 - O repositório está público no GitHub
 - O app roda corretamente no Expo Go
 - A pasta `node_modules` não foi enviada para o repositório
-- Todos os prints estão em `assets/screenshots/`
+- Todos os prints estão em `OrbitIQ/assets/screenshots/`
 - O link do vídeo foi atualizado no README
 - O vídeo possui no máximo 3 minutos
 - O arquivo de entrega contém nomes, RMs, link do GitHub e link do vídeo
