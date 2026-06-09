@@ -2,10 +2,6 @@
 
 ### Global Solution 2026.1 — Cross-Platform Application Development | FIAP
 
-<p align="center">
-  <img src="./assets/images/banner-orbitiq.png" alt="Banner OrbitIQ" width="100%">
-</p>
-
 ## Descrição
 
 O **OrbitIQ** é um aplicativo mobile desenvolvido em **React Native + Expo** para simular uma plataforma inteligente de monitoramento e análise preditiva de uma missão espacial.
